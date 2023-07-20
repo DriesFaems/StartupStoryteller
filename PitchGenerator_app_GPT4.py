@@ -37,7 +37,7 @@ clicked = st.button('Click me')
 
 if clicked:
     st.write('Button clicked! Performing an operation...')
-    chat = ChatOpenAI(openai_api_key = open_api_key, model_name='gpt-4', temperature = 0.8)
+    chat = ChatOpenAI(openai_api_key = open_api_key, model_name='gpt-4', temperature = 0.2)
     # Prompt storytelling on painpoint
     template = "You are an expert in painpoint storytelling. When developing the story, make it as personal as possible, considering my name is {name} and my personal situaton is: {personalconnection}. Make sure to stay within maximum token limit. Focus on the painpoint, not the solution."
     system_message_prompt = SystemMessagePromptTemplate.from_template(template)
